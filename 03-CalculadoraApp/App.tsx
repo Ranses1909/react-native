@@ -1,11 +1,13 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, SafeAreaView} from 'react-native';
+import CalculadoraScreen from './src/screens/CalculadoraScreen';
+import styles from './src/theme/appTheme'
 
 const App = () => {
   return (
-    <View>
-  <Text>Hola Mundoaaa</Text>
-      </View>
+   <SafeAreaView style={styles.fondo}>
+    <CalculadoraScreen/>
+   </SafeAreaView>
     )
   }
 
