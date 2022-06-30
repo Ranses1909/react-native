@@ -5,9 +5,9 @@ const styles = StyleSheet.create({
         flex:1,
         backgroundColor: 'black'
     },
-    text:{
+    texto:{
         fontSize:20,
-        color: 'white'
+        color: 'white',
     },
 });
 export default styles;
