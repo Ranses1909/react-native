@@ -17,9 +17,14 @@ const styles = StyleSheet.create({
         color: 'rgb(255,255,255,0,5)',
         textAlign: 'right',
     },
-    btnFirstRow:{
+    btn:{
         height: 60,
         width: 60,
+        backgroundColor: 'gray',
+        borderRadius:50,
+    },
+    largeBtn:{
+        width: 120,
         backgroundColor: 'gray',
         borderRadius:50,
     },
@@ -29,6 +34,11 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         // top:5,
         alignSelf: 'center',
+    },
+    row:{
+      flexDirection:'row',  
+      marginBottom: 18,
+      justifyContent: 'flex-start',
     },
 });
 export default styles;
