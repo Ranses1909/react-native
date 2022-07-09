@@ -7,9 +7,9 @@ const styles = StyleSheet.create({
     },
     container: {
         flex: 1,
-        paddingHorizontal: 20,
-        justifyContent: 'flex-end',
-        marginHorizontal: 10,
+        paddingHorizontal: 10,
+        alignItems: 'center',
+        // marginHorizontal: 10,
     },
     results:{
         fontSize:60,
@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
     row:{
         flexDirection: 'row',
         justifyContent: 'center',
-        marginBottom: 18,
+        marginBottom: 180,
         paddingHorizontal: 10
     },
 });
