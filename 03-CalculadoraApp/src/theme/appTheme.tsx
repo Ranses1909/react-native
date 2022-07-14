@@ -33,11 +33,8 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         marginHorizontal: 10
     },
-    //   text:{
-    //     // marginHorizontal: 10,
-    //     justifyContent: 'space-between',
-    //   },
     btnContent:{
+        fontFamily:'bold',
         textAlign: 'center',
         padding: 10,
         fontSize: 40,

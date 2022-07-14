@@ -20,29 +20,7 @@ const FlexScreen = () => {
 <Text style={styles.caja2}>caja2</Text>
 <Text style={styles.caja3}>caja3</Text>
 <Text style={styles.caja1}>caja1</Text>
-<Text style={styles.caja2}>caja2</Text>
-<Text style={styles.caja3}>caja3</Text>
-<Text style={styles.caja1}>caja1</Text>
-<Text style={styles.caja2}>caja2</Text>
-<Text style={styles.caja3}>caja3</Text>
-<Text style={styles.caja1}>caja1</Text>
-<Text style={styles.caja2}>caja2</Text>
-<Text style={styles.caja3}>caja3</Text>
-<Text style={styles.caja1}>caja1</Text>
-<Text style={styles.caja2}>caja2</Text>
-<Text style={styles.caja3}>caja3</Text>
-<Text style={styles.caja1}>caja1</Text>
-<Text style={styles.caja2}>caja2</Text>
-<Text style={styles.caja3}>caja3</Text>
-<Text style={styles.caja1}>caja1</Text>
-<Text style={styles.caja2}>caja2</Text>
-<Text style={styles.caja3}>caja3</Text>
-<Text style={styles.caja1}>caja1</Text>
-<Text style={styles.caja2}>caja2</Text>
-<Text style={styles.caja3}>caja3</Text>
-<Text style={styles.caja1}>caja1</Text>
-<Text style={styles.caja2}>caja2</Text>
-<Text style={styles.caja3}>caja3</Text>
+
    </View>
   )
 }
