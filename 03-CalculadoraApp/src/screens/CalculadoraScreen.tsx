@@ -4,16 +4,20 @@ import BtnCalc from '../components/BtnCalc';
 import styles from '../theme/appTheme'
 
 const CalculadoraScreen = () => {
-    // const content = [1,2,3,4,5,6,7,8 ];
-    // const content = ["AC","-/+","%","/",'7','8','9','x','4', '5','6','-','1', '2', '3', '+', ];
+ const [number, setNumber] = useState('10');
+const limpiar = () => {
+  setNumber('0')
+}
+const calculate = () => {
 
+}
   return (
     <View style={styles.container}>
         <Text style={styles.previousResult}>1,500.00</Text>
-        <Text style={styles.results}>1,500.00</Text>
+        <Text style={styles.results}>{number}</Text>
 
         <View style={styles.row}>
-          <BtnCalc content="AC" color="#9B9B9B"/>
+          <BtnCalc content="AC" color="#9B9B9B" action={limpiar}/>
           <BtnCalc content="+/-" color={'#9B9B9B'}/>
           <BtnCalc content="del" color={'#9B9B9B'}/>
           <BtnCalc content="/" color={'#FF9427'}/>

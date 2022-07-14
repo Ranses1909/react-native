@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
     },
     previousResult:{
         fontSize:30,
-        color: 'rgb(255,255,255,0,5)',
+        color: 'gray',
         textAlign: 'right',
     },
     //  largeBtn:{
