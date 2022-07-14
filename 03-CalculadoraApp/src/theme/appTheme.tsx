@@ -8,8 +8,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         paddingHorizontal: 10,
-        alignItems: 'center',
-        // marginHorizontal: 10,
+        justifyContent: 'flex-end',
     },
     results:{
         fontSize:60,
@@ -29,10 +28,10 @@ const styles = StyleSheet.create({
     btn:{
         height: 80,
         width: 80,
-        backgroundColor: 'gray',
-        borderRadius:50,
+        backgroundColor: '#2D2D2D',
+        borderRadius: 100,
         justifyContent: 'center',
-        marginHorizontal:10,
+        marginHorizontal: 10
     },
     //   text:{
     //     // marginHorizontal: 10,
@@ -40,17 +39,15 @@ const styles = StyleSheet.create({
     //   },
     btnContent:{
         textAlign: 'center',
-        color: 'white',
-        fontSize: 40,
         padding: 10,
-        fontWeight: 'bold',
-        // top:5,
-        // alignSelf: 'center',
+        fontSize: 40,
+        color: 'white',
+        fontWeight: '300'
     },
     row:{
         flexDirection: 'row',
         justifyContent: 'center',
-        marginBottom: 180,
+        marginBottom: 18,
         paddingHorizontal: 10
     },
 });

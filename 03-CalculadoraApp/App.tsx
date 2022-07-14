@@ -5,8 +5,8 @@ import styles from './src/theme/appTheme'
 
 const App = () => {
   return (
-   <SafeAreaView style={styles.fondo}>
-    {/* to put the status bar black */}
+    <SafeAreaView style={styles.fondo}>
+     {/* to put the status bar black */}
     <StatusBar
     backgroundColor='black'
     barStyle='light-content'
