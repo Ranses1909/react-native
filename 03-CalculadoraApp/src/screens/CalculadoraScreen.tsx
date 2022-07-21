@@ -4,12 +4,14 @@ import BtnCalc from '../components/BtnCalc';
 import styles from '../theme/appTheme'
 
 const CalculadoraScreen = () => {
- const [number, setNumber] = useState('10');
+ const [number, setNumber] = useState('0');
+ const [previousNumber, setPreviousNumber] = useState('0');
 const limpiar = () => {
-  setNumber('0')
+  setNumber('')
 }
-const calculate = () => {
-
+const calculate = (numeroContent:() => void) => {
+// :() => void
+setNumber(number + previousNumber)
 }
   return (
     <View style={styles.container}>
@@ -23,26 +25,26 @@ const calculate = () => {
           <BtnCalc content="/" color={'#FF9427'}/>
           </View>
         <View style={styles.row}>
-          <BtnCalc content="7" />
-          <BtnCalc content="8" />
-          <BtnCalc content="9" />
-          <BtnCalc content="x" color={'#FF9427'}/>
+          <BtnCalc content="7" action={calculate}/>
+          <BtnCalc content="8" action={calculate}/>
+          <BtnCalc content="9" action={calculate}/>
+          <BtnCalc content="x" color={'#FF9427'} action={calculate}/>
           </View>
         <View style={styles.row}>
-          <BtnCalc content="4" />
-          <BtnCalc content="5" />
-          <BtnCalc content="6" />
-          <BtnCalc content="-" color={'#FF9427'}/>
+          <BtnCalc content="4" action={calculate}/>
+          <BtnCalc content="5"action={calculate} />
+          <BtnCalc content="6" action={calculate}/>
+          <BtnCalc content="-" color={'#FF9427'} action={calculate}/>
           </View>
         <View style={styles.row}>
-          <BtnCalc content="1" />
-          <BtnCalc content="2" />
-          <BtnCalc content="3" />
-          <BtnCalc content="+" color={'#FF9427'}/>
+          <BtnCalc content="1" action={calculate}/>
+          <BtnCalc content="2" action={calculate}/>
+          <BtnCalc content="3" action={calculate}/>
+          <BtnCalc content="+" color={'#FF9427'} action={calculate}/>
           </View>
         <View style={styles.row}>
-          <BtnCalc content="0" ancho={true} />
-          <BtnCalc content="," />
+          <BtnCalc content="0" ancho={true} action={calculate} />
+          <BtnCalc content="." action={calculate}/>
           <BtnCalc content="=" color={'#FF9427'}/>
           </View>
 

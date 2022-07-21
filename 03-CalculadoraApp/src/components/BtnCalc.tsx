@@ -6,13 +6,14 @@ interface Props {
  content: string;
  color?: string;
  ancho?: boolean;
- action?: () => void;
+//  aqui deberiamos recibr un argumento
+ action: (numeroContent:string) => void;
 }
 
-const BtnCalc = ({content,color='#2D2D2D',ancho, action}:Props) => {
+const BtnCalc = ({content,color='#2D2D2D',ancho, action,}:Props) => {
   return(
     <TouchableOpacity
-      onPress={action}
+      onPress={() => action(content)}
       >
     <View style={{...styles.btn,
     backgroundColor:color,
