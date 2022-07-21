@@ -7,13 +7,15 @@ interface Props {
  color?: string;
  ancho?: boolean;
 //  aqui deberiamos recibr un argumento
- action: (numeroContent:string) => void;
+ onclick: (btnContent:string) => void;
 }
 
-const BtnCalc = ({content,color='#2D2D2D',ancho, action,}:Props) => {
+const BtnCalc = ({content,color='#2D2D2D',ancho, onclick: onclick,}:Props) => {
   return(
     <TouchableOpacity
-      onPress={() => action(content)}
+    // when you click on the touchable activates a callback function that calls along with its argument
+    // onClick agarra content (numeroContent becomes content)
+      onPress={() => onclick(content)}
       >
     <View style={{...styles.btn,
     backgroundColor:color,
