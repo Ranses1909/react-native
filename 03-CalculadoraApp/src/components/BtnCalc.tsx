@@ -14,7 +14,7 @@ const BtnCalc = ({content,color='#2D2D2D',ancho, onclick,}:Props) => {
   return(
     <TouchableOpacity
     // when you click on the touchable activates a callback function that calls along with its argument
-    // onClick agarra content (numeroContent becomes content)
+    // onClick agarra content btnContent becomes content)
       onPress={() => onclick(content)}
       >
     <View style={{...styles.btn,

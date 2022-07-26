@@ -9,10 +9,11 @@ interface iState {
   btnContent: string;
 }
   const initialState:iState = {
-  number:'0',
-  previousNumber:"0",
-  btnContent: '0',
-}
+    number: '0',
+    previousNumber: "100",
+    btnContent: ''
+  }
+
 
 const CalculadoraScreen = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
@@ -23,8 +24,10 @@ const CalculadoraScreen = () => {
 // calculate grabs the content of the btn
 const calculate = (btnContent: string) => {
 // we concatenate with number what we have in that specific btn
-dispatch({type: 'CALCULATE',})
+dispatch({type: 'CALCULATE', payload: btnContent})
 }
+
+
   return (
     <View style={styles.container}>
         <Text style={styles.previousResult}>{state.previousNumber}</Text>
@@ -42,7 +45,7 @@ dispatch({type: 'CALCULATE',})
           <BtnCalc content="/" color={'#FF9427'} onclick={limpiar}/>
           </View>
          <View style={styles.row}>
-          <BtnCalc content="7" onclick={() => calculate(state.btnContent)}/>
+          <BtnCalc content="7" onclick={calculate}/>
           <BtnCalc content="8" onclick={calculate}/>
           <BtnCalc content="9" onclick={calculate}/>
           <BtnCalc content="x" color={'#FF9427'} onclick={calculate}/>
@@ -72,6 +75,3 @@ dispatch({type: 'CALCULATE',})
 
 export default CalculadoraScreen
 
-// function reducer(reducer: any, initialState: any): [any, any] {
-//   throw new Error('Function not implemented.');
-// }
