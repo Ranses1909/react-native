@@ -6,15 +6,16 @@ import reducer from '../components/reducer'
 interface iState {
   number: string;
   previousNumber: string;
+  btnContent: string;
 }
-  const initialState = {
+  const initialState:iState = {
   number:'0',
-  previousNumber:"0"
+  previousNumber:"0",
+  btnContent: '0',
 }
 
-  
 const CalculadoraScreen = () => {
-  const [state, dispatch] = useReducer(reducer, {initialState});
+  const [state, dispatch] = useReducer(reducer, initialState);
   
   const limpiar = () => {
     dispatch({type: 'CLEAR'})
@@ -22,7 +23,7 @@ const CalculadoraScreen = () => {
 // calculate grabs the content of the btn
 const calculate = (btnContent: string) => {
 // we concatenate with number what we have in that specific btn
-dispatch({type: 'CALCULATE', payload: btnContent})
+dispatch({type: 'CALCULATE',})
 }
   return (
     <View style={styles.container}>
@@ -41,7 +42,7 @@ dispatch({type: 'CALCULATE', payload: btnContent})
           <BtnCalc content="/" color={'#FF9427'} onclick={limpiar}/>
           </View>
          <View style={styles.row}>
-          <BtnCalc content="7" onclick={calculate}/>
+          <BtnCalc content="7" onclick={() => calculate(state.btnContent)}/>
           <BtnCalc content="8" onclick={calculate}/>
           <BtnCalc content="9" onclick={calculate}/>
           <BtnCalc content="x" color={'#FF9427'} onclick={calculate}/>

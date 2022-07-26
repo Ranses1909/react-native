@@ -6,8 +6,8 @@ const reducer = (state: any, action:any) => {
     if(action.type === 'CALCULATE'){
         return {
             ...state,
-            number: '0' + action.payload.btnContent
+            number: '0'+ action.btnContent
         }
-    }
+    };
 }
 export default reducer

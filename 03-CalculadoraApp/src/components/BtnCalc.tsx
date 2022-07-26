@@ -10,7 +10,7 @@ interface Props {
  onclick: (btnContent:string) => void;
 }
 
-const BtnCalc = ({content,color='#2D2D2D',ancho, onclick: onclick,}:Props) => {
+const BtnCalc = ({content,color='#2D2D2D',ancho, onclick,}:Props) => {
   return(
     <TouchableOpacity
     // when you click on the touchable activates a callback function that calls along with its argument
