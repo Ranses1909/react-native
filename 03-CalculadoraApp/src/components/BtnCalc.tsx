@@ -7,7 +7,7 @@ interface Props {
  color?: string;
  ancho?: boolean;
 //  aqui deberiamos recibr un argumento
- onclick: (btnContent:string) => void;
+ onclick: (btnText:string) => void;
 }
 
 const BtnCalc = ({content,color='#2D2D2D',ancho, onclick,}:Props) => {
