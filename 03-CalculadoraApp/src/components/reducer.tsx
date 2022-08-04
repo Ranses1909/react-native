@@ -4,10 +4,12 @@ const reducer = (state:any , action:any) => {
     };
 
     if(action.type === 'CALCULATE'){
-        return {...state,
-            // IF YOU ARE PASSING JUST ONE PARAMETER YOU DON'T NEED TO PUT THE NAME AFTER .payload
-            number: state.number + action.payload
-        }
+    // IF YOU ARE PASSING JUST ONE PARAMETER YOU DON'T NEED TO PUT THE NAME AFTER .payload for example "action.payload.btnText"
+    return {
+    ...state, 
+    number: state.number.replace('0','') + action.payload,
+    numBeforeNum: state.number,
+    } 
     };
 
     if(action.type === 'PN'){
@@ -18,10 +20,7 @@ const reducer = (state:any , action:any) => {
         }}else{
             return { ...state, number: '-' + state.number}
         }
-   
-
-
-    }
+    };
 
     }
 

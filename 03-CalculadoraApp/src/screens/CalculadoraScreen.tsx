@@ -5,9 +5,10 @@ import styles from '../theme/appTheme'
 import reducer from '../components/reducer'
 
   const initialState = {
-    number: '0',
-    previousNumber: "100",
-    btnText: '0'
+    number: '0',  //actual state.number
+    numBeforeNum: '0', // this is just for storing the number pressed before
+    previousNumber: "100", // this is  the previous result
+    btnText: '0' // what is coming from btnCalc 
   }
 
 const CalculadoraScreen = () => {
@@ -28,6 +29,7 @@ const positiveNegative = () => {
 
   return (
     <View style={styles.container}>
+      <Text style={styles.previousResult}>{state.numBeforeNum}</Text>
         <Text style={styles.previousResult}>{state.previousNumber}</Text>
         <Text 
         style={styles.results}
