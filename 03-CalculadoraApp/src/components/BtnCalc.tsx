@@ -33,3 +33,4 @@ const BtnCalc = ({content,color='#2D2D2D',ancho, onclick,}:Props) => {
 }
 
 export default BtnCalc
+

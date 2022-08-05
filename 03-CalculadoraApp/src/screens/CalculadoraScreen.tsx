@@ -29,7 +29,6 @@ const positiveNegative = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.previousResult}>{state.numBeforeNum}</Text>
         <Text style={styles.previousResult}>{state.previousNumber}</Text>
         <Text 
         style={styles.results}
