@@ -25,12 +25,15 @@ const useCalculadora = () => {
   // we concatenate with number what we have in that specific btn
   dispatch({type: 'BUILDNUMBER', payload: btnText})
   }
+  
   const positiveNegative = (btnText: string) => {
     dispatch({type: 'PN', payload: btnText})
   }
+
   const removeLast = () => {
     dispatch({type: 'DELETE'})
   }
+
   const numBefore =() =>{
   dispatch({type: 'PREVIOUS'})
   }
