@@ -1,15 +1,21 @@
+import { StackScreenProps } from '@react-navigation/stack';
 import React from 'react'
-import { Text, View } from 'react-native';
+import { Button, Text, View } from 'react-native';
 
-const pagina3Screen = () => {
+interface Props extends StackScreenProps<any, any>{};
+
+const Pagina3Screen = ({navigation}: Props) => {
   return (
     <View>
-        <Text>
-
-        pagina1Screen
-        </Text>
+        <Text>Pagina3Screen</Text>
+   <Button 
+   title="regresar"
+   onPress={() =>navigation.pop}/>
+   <Button 
+   title="Primera pagina"
+   onPress={() =>navigation.popToTop}/>
     </View>
   )
 }
 
-export default pagina3Screen
+export default Pagina3Screen
