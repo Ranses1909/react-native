@@ -5,14 +5,23 @@ import { styles } from '../theme/AppTheme';
 
 const Pagina2Screen = () => {
   // stackNavigation offers this hook
-  const navigator = useNavigation();
+  const navigator = useNavigation<any>();
+
+  // para ios 
+  React.useEffect(() => {
+    navigator.setOptions({
+      // Title string used by the back button on iOS. Defaults to the previous scene's headerTitle.
+      // title: 'Hola Mundo',
+      headerBackTitle: 'back'
+    })
+  })
   return (
     <View style={styles.globalMargin}>
-        <Text>pagina2Screen</Text>
+        <Text style={styles.title}>pagina2Screen</Text>
         
         <Button 
         title="Pagina 3"
-        onPress={() => navigator.navigate("Pagina3Screen")}
+        onPress={() => navigator.navigate('Pagina3Screen' )}
         />
     </View>
   )
