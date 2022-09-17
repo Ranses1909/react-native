@@ -1,10 +1,10 @@
 import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack';
-import Pagina1Screen from "../screens/Pagina1Screen";
-import Pagina2Screen from '../screens/Pagina2Screen';
-import Pagina3Screen from '../screens/Pagina3Screen';
-import {styles} from '../theme/AppTheme'
-import PersonaScreen from '../screens/PersonaScreen';
+import Pagina1Screen from "../../../04-navegacionApp/src/screens/Pagina1Screen";
+import Pagina2Screen from '../../../04-navegacionApp/src/screens/Pagina2Screen';
+import Pagina3Screen from '../../../04-navegacionApp/src/screens/Pagina3Screen';
+import {styles} from '../../../04-navegacionApp/src/theme/AppTheme'
+import PersonaScreen from '../../../04-navegacionApp/src/screens/PersonaScreen';
 
 // if we dont receive any data in the screen que declare type as undefined (recommended on documentation)
 export type RootStackParams = {

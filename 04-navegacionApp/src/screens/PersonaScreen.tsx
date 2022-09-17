@@ -14,7 +14,7 @@ import { styles } from '../theme/AppTheme'
 interface Props extends StackScreenProps<RootStackParams, 'PersonaScreen'>{};
 // we desctructure the "route" object we saw when console loging 
 const PersonaScreen = ({route,navigation}:Props) => {
-
+ 
   // inside of route object we have propertie params, we extract it
 
   const params = route.params;
@@ -37,9 +37,9 @@ const PersonaScreen = ({route,navigation}:Props) => {
         <Text style={styles.title}>
            {JSON.stringify(params, null, 3)}
         </Text>
-        <Button 
+        {/* <Button 
    title="regresar"
-   onPress={() => navigation.pop(1)}/>
+   onPress={() => navigation.pop(1)}/> */}
     </View>
   )
 }
