@@ -6,9 +6,9 @@ import Pagina3Screen from '../../../04-navegacionApp/src/screens/Pagina3Screen';
 import {styles} from '../../../04-navegacionApp/src/theme/AppTheme'
 import PersonaScreen from '../../../04-navegacionApp/src/screens/PersonaScreen';
 
-// if we dont receive any data in the screen que declare type as undefined (recommended on documentation)
+// if we dont receive any data in the screen we declare type as undefined (recommended on documentation)
 export type RootStackParams = {
-  Pagina1Screen: undefined,
+Pagina1Screen: undefined,
 Pagina2Screen: undefined,
 Pagina3Screen: undefined,
 PersonaScreen: {id:number, name:string},
@@ -24,7 +24,7 @@ export const StackNavigator = ()=> {
     screenOptions={{
       headerStyle:{elevation: 0},
       // headerShown: false,
-      cardStyle:{  backgroundColor:'white' } 
+      cardStyle:{ backgroundColor:'white' } 
     }}
     >
 
