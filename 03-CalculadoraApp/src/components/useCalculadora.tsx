@@ -40,7 +40,7 @@ const useCalculadora = () => {
   
   const calcDiv = () => {
     numBefore();
-    lastReference.current= 'dividir'
+    lastReference.current = 'dividir'
     // dispatch({type: 'DIVISION'})
   }
   const calcMulti = () => {
@@ -55,7 +55,7 @@ const useCalculadora = () => {
   }
   const calcResta = () => {
     numBefore();
-    lastReference.current= 'restar'
+    lastReference.current = 'restar'
     // dispatch({type: 'RESTA' })
   }
   

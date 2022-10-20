@@ -16,12 +16,9 @@ const {width} = useWindowDimensions()
       headerShown: false  ,// Oculta la hamburguesa
       drawerStyle:{backgroundColor: '#779BE7', width: 200},
       // drawerInactiveTintColor:'gray',
-      drawerLabelStyle:{
-        color: 'black',
-        fontWeight: 'bold',
-      }
-      
-   }} >
+      drawerLabelStyle:{  color: 'black',fontWeight: 'bold', }
+      }} 
+      >
       <Drawer.Screen name="StacNavigator" options={{title:'Home'}}  component={StackNavigator} />
       <Drawer.Screen name="SettingsScreens" options={{title:'Settings'}}  component={SettingsScreens} />
     </Drawer.Navigator>

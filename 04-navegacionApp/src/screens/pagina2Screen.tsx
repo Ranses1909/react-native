@@ -15,6 +15,7 @@ const Pagina2Screen = () => {
       headerBackTitle: 'back'
     })
   })
+  
   return (
     <View style={styles.globalMargin}>
         <Text style={styles.title}>pagina2Screen</Text>
