@@ -51,7 +51,7 @@ const Pagina1Screen = ({navigation}: Props) => {
     </TouchableOpacity>
 
 
-{/* Leidimar */}
+   {/* Leidimar */}
     <TouchableOpacity
     style={{...styles.buttons,
     marginLeft:10,

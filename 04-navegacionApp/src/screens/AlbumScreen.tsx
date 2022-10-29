@@ -1,14 +1,23 @@
 import React from 'react'
-import { View, Text } from 'react-native'
+import { View, Text, Button } from 'react-native';
+import { AuthContext } from '../context/Context';
 
 const AlbumScreen = () => {
+  const { logOut, authState} = React.useContext(AuthContext);
     return (
         <View>
           <Text>
                   AlbumScreen
          </Text>
-        </View>
-          )
-}
+
+         {authState.isLoggedIn  ?
+        <Button 
+        title='LOG OUT'
+        onPress={logOut}
+         />
+         :   null
+         }
+         </View>
+    ) }
 
 export default AlbumScreen

@@ -19,7 +19,7 @@ const {width} = useWindowDimensions()
     screenOptions={{
       drawerType: width >= 500 ? 'permanent' : 'front', // Menú modo horizontal
       title:'',
-      headerShown: true  ,// Oculta la hamburguesa
+      headerShown: false  ,// Oculta la hamburguesa
       drawerStyle:{backgroundColor: 'white', width: 200},
       // styling label in the drawer
       drawerLabelStyle:{
