@@ -32,7 +32,7 @@ export const StackNavigator = ()=> {
       cardStyle:{ backgroundColor:'white' } 
     }}
     >
-
+    
       <Stack.Screen name="Pagina1Screen" options={{title: 'Pagina 1',   headerTitleAlign: 'center'}} component={Pagina1Screen} />
 
       <Stack.Screen name="Pagina2Screen" options={{title: 'Pagina 2',   headerTitleAlign: 'center'}} component={Pagina2Screen} />
