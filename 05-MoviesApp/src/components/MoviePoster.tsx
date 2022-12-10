@@ -8,8 +8,7 @@ import { Cast } from '../interfaces/movieDBInterface';
 
 // we make an interface to specify type of props coming from homeScreen, and we want to receive the whole movie
 interface Props {
-  cast?: Cast[]
-movie?: Movies;
+movie: Movies;
 height?: number;
 width?: number;
 }

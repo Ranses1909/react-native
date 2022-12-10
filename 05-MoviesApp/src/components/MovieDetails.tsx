@@ -46,7 +46,7 @@ const MovieDetails = ({fullMovie, cast}:Props) => {
           {new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'USD' }).format(fullMovie.budget)}
           </Text>
 
-          <HorizontalSlider title={'perfomers'} cast={cast}/>
+          {/* <HorizontalSlider title={'perfomers'} cast={cast}/> */}
     </View>
 
   )

@@ -6,13 +6,12 @@ import { Cast, Movies } from '../interfaces/movieDBInterface';
 import MoviePoster from './MoviePoster';
 
 interface Props {
-  cast?: Cast[];
-    movies?: Movies[];
+    movies: Movies[];
     title?: string;
 }
 // we used this custom component in homeScreen
 // nowPlaying lo recibimos como movies
-const HorizontalSlider = ({movies,title,cast}:Props) => {
+const HorizontalSlider = ({movies,title}:Props) => {
     // const {nowPlaying, isLoading} =  useGetMovies()
   return (
     <View>
