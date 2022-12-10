@@ -5,7 +5,7 @@ const styles = StyleSheet.create({
   sectionTitle: {
     fontSize: 24,
     fontWeight: '600',
-    color: 'white'
+    color: 'black'
   },
 image:{
   flex: 1,
@@ -15,6 +15,7 @@ viewStyle: {
 
 },
 imageContainer:{
+  marginHorizontal:10,
   width:'100%',
  flex: 1,
    shadowColor: "#000",

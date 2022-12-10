@@ -1,10 +1,12 @@
 import { StackScreenProps } from '@react-navigation/stack'
 import React from 'react'
-import { View, Text, Image, Dimensions, ScrollView } from 'react-native'
+import { View, Text, Image, Dimensions, ScrollView, ActivityIndicator } from 'react-native'
 import styles from '../../appTheme'
 // import { Movies } from '../interfaces/movieDBInterface'
 import { RootStackParams } from '../navigation/Navigator'
 import Icon from 'react-native-vector-icons/Ionicons';
+import useMovieDetails from '../hooks/useMovieDetails';
+import MovieDetails from '../components/MovieDetails';
 
 interface Props extends StackScreenProps<RootStackParams,'DetailScreen'>{}
 
@@ -14,7 +16,12 @@ const DetailScreen = ({route}: Props) => {
   // ordering tp to try this params as Movies
   const movie = route.params
   const uri = `https://image.tmdb.org/t/p/w500${movie.poster_path}`
-  
+  console.log(movie.id)
+  // comming from custom hook UseMovieDetails
+  const {isLoading,fullMovie,cast} = useMovieDetails(movie.id)
+  if(isLoading){
+    isLoading
+  }
   return (
     <ScrollView>
 
@@ -33,13 +40,14 @@ const DetailScreen = ({route}: Props) => {
    <Text style={styles.title}> {movie.title}</Text>
   </View>
 
-  <View style={styles.imageContainer}>
-  <Icon
-  name="star-outline"
-  color="primary"
-  size={30}
-  />
-  </View>
+
+  { 
+  isLoading 
+  ?  <ActivityIndicator size={30} color="gray" style={{marginTop:20}}/>
+  // ! means trust me i will send the data for u
+   : <MovieDetails fullMovie={fullMovie!} cast={cast}/>
+}
+
   </ScrollView>
   )
 }

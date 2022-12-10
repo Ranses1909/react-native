@@ -4,14 +4,17 @@ import { Text, View, Image, TouchableOpacity } from 'react-native';
 import styles from '../../appTheme';
 import {Movies}from '../interfaces/movieDBInterface'
 import DetailScreen from '../screens/DetailScreen'
+import { Cast } from '../interfaces/movieDBInterface';
 
 // we make an interface to specify type of props coming from homeScreen, and we want to receive the whole movie
 interface Props {
-movie: Movies;
+  cast?: Cast[]
+movie?: Movies;
 height?: number;
 width?: number;
 }
 
+// we use this custom component in HomeScreen
 // it receives a prop 
 const MoviePoster = ({movie, height=420, width=300}:Props) => {
     // in case that you forget read here: https://developers.themoviedb.org/3/getting-started/images

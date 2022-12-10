@@ -17,10 +17,10 @@ const useGetMovies = () => {
     const [isLoading, setIsLoading] = React.useState(true);
     // Movies[] comes from interfaces is needed to especify what useState will get 
    const [moviesState, setMoviesState] = React.useState<MoviesState>({
-    nowPlaying:[],
-    popularity:[],
-    topRated:[],
-    upcoming:[],  
+    nowPlaying: [],
+    popularity: [],
+    topRated: [],
+    upcoming: [],  
 });
 
     const getMovies = async () => {
@@ -47,7 +47,7 @@ const useGetMovies = () => {
 
         setIsLoading(false)
     }
-    
+        
     React.useEffect(() => {
         getMovies();
     },[]) 
